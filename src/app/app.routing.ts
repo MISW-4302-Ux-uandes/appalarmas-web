@@ -73,5 +73,21 @@ export const appRoutes: Route[] = [
         children: [
             {path: 'example', loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
         ]
+    },
+
+    // Module routes
+    {
+        path:'',
+        canMatch: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: InitialDataResolver,
+        },
+        children:[
+            {path: 'Alarmas', loadChildren: ()=> import('app/modules/alarmas/alarmas.module').then(m => m.AlarmasModule)},
+            {path: 'Grupos', loadChildren: ()=> import('app/modules/grupos/grupos.module').then(m => m.GruposModule)},
+            {path: 'Ajustes', loadChildren: ()=> import('app/modules/ajustes/ajustes.module').then(m => m.AjustesModule)},
+            {path: 'Categorias', loadChildren: ()=> import('app/modules/categorias/categorias.module').then(m => m.CategoriasModule)},
+        ]
     }
 ];
