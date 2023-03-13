@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FuseCardModule } from '@fuse/components/card';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
     imports: [
@@ -34,6 +36,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatSortModule,
         MatTableModule,
         MatTabsModule,
+        FuseCardModule,
+        MatSlideToggleModule
     ]
 })
 export class SharedModule
