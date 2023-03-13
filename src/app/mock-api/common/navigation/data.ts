@@ -36,7 +36,7 @@ export const compactNavigation: FuseNavigationItem[] = [
         id   : 'alarmas',
         title: 'Alarmas',
         type : 'basic',
-        icon : 'heroicons_outline:clock',
+        icon : 'mat_solid:access_alarms',
         link : '/Alarmas'
     },
     {

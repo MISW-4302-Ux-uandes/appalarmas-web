@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlarmasComponent } from './alarmas.component';
 import { Route, RouterModule } from '@angular/router';
+import { SharedModule } from 'app/shared/shared.module';
 
 const alarmasRoutes:Route[] = [
     {
@@ -16,7 +17,8 @@ const alarmasRoutes:Route[] = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(alarmasRoutes)
+    RouterModule.forChild(alarmasRoutes),
+    SharedModule
   ]
 })
 export class AlarmasModule { }

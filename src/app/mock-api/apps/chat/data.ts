@@ -3003,8 +3003,8 @@ export const contacts = [
 ];
 export const profile: any = {
     id    : 'cfaad35d-07a3-4447-a6c3-d8c3d54fd5df',
-    name  : 'Brian Hughes',
+    name  : 'Invitado Uniandes',
     email : 'invitado@uniandes.edu.co',
-    avatar: 'assets/images/avatars/brian-hughes.jpg',
+    avatar: 'assets/images/avatars/user.png',
     about : 'Hi there! I\'m using FuseChat.'
 };
