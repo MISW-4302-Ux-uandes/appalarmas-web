@@ -13,9 +13,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AlarmCardTypeComponent } from './alarm-card-type/alarm-card-type.component';
+import { GroupFormComponent } from './group-form/group-form.component';
+import { FuseAlertModule } from '@fuse/components/alert';
 
 @NgModule({
-  declarations: [AlarmCardComponent, AlarmFormComponent, AlarmCardTypeComponent],
+  declarations: [AlarmCardComponent, AlarmFormComponent, AlarmCardTypeComponent, GroupFormComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -28,6 +30,7 @@ import { AlarmCardTypeComponent } from './alarm-card-type/alarm-card-type.compon
     MatSelectModule,
     MatStepperModule,
     MatMenuModule,
+    FuseAlertModule
   ],
   exports:[
     AlarmCardComponent,

@@ -27,10 +27,12 @@
                     <button
                         class="bg-accent"
                         mat-flat-button
+                        (click)="abrirFormCrearGrupo()"
                         [color]="'accent'">
                         <mat-icon
                             class="icon-size-5"
-                            [svgIcon]="'heroicons_outline:user-group'"></mat-icon>
+                            [svgIcon]="'heroicons_outline:user-group'"
+                            ></mat-icon>
                         <span class="ml-2">Nuevo grupo</span>
                     </button>
                     <button

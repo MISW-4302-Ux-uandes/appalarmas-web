@@ -40,9 +40,6 @@
 
                     <mat-step [formGroupName]="'step1'" [stepControl]="horizontalStepperForm.get('step1')">
                         <ng-template matStepLabel>Para quién</ng-template>
-                        <div class="grid grid-cols-2 ">
-
-
                             <span class="font-medium ">Seleccione para quién es la alarma</span>
                             <div class="flex flex-col gt-sm:flex-row">
                                 <div class="flex flex-col mt-8 gt-sm:mt-0 gt-sm:ml-16">
@@ -57,7 +54,7 @@
                                     </mat-radio-group>
                                 </div>
                             </div>
-                        </div>
+
                         <div class="flex justify-end mt-8">
                             <button class="px-8" mat-flat-button [color]="'primary'" type="button" matStepperNext>
                                 Siguiente
