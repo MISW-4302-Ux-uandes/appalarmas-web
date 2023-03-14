@@ -1,1 +1,98 @@
-<p>categorias works!</p>
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="bg-card">
+        <div class="flex flex-col w-full max-w-screen-xl mx-auto px-6 sm:px-8">
+            <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                <!-- Avatar and name -->
+                <div class="flex flex-auto items-center min-w-0">
+                    <div class="flex flex-col min-w-0 ml-4">
+                        <div class="flex items-center">
+                            <mat-icon
+                                class="icon-size-6"
+                                [svgIcon]="'heroicons_outline:tag'"></mat-icon>
+                             <!-- Title -->
+                            <div class="mt-2">
+                                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                                    <ng-container >
+                                        <h1>Categoría</h1>
+                                    </ng-container>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center mt-6 sm:mt-0 sm:ml-2 space-x-3">
+                    <button
+                        mat-flat-button
+                        [color]="'primary'"
+                        (click)="abrirFormCrearGrupo()"
+                        >
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_outline:tag'"></mat-icon>
+                        <span class="ml-2">Nueva categoría</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+        <div class="w-full max-w-screen-xl mx-auto">
+            <mat-grid-list cols="5" rowHeight="5:1">
+                <mat-grid-tile [colspan]="1">Color etiqueta</mat-grid-tile>
+                <mat-grid-tile>Label</mat-grid-tile>
+                <mat-grid-tile>Cantidad de alarmas</mat-grid-tile>
+                <mat-grid-tile >Acción</mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list cols="5" rowHeight="5:1">
+                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-red-500 dark:text-red-400"></mat-icon></mat-grid-tile>
+                <mat-grid-tile>Citas Médicas</mat-grid-tile>
+                <mat-grid-tile>3 Alarmas</mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                </mat-grid-tile>
+              </mat-grid-list>
+
+            <mat-grid-list cols="5" rowHeight="5:1">
+                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-orange-500 dark:text-orange-400"></mat-icon></mat-grid-tile>
+                <mat-grid-tile>Tomar medicamentos</mat-grid-tile>
+                <mat-grid-tile>1 Alarmas</mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                </mat-grid-tile>
+              </mat-grid-list>
+              
+            <mat-grid-list cols="5" rowHeight="5:1">
+                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-blue-500 dark:text-blue-400"></mat-icon></mat-grid-tile>
+                <mat-grid-tile>Recordatorios</mat-grid-tile>
+                <mat-grid-tile>Sin alarmas</mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                </mat-grid-tile>
+              </mat-grid-list>
+              
+              <mat-grid-list cols="5" rowHeight="5:1">
+                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-green-500 dark:text-orange-400"></mat-icon></mat-grid-tile>
+                <mat-grid-tile>Cumpleaños</mat-grid-tile>
+                <mat-grid-tile>Sin alarmas</mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                </mat-grid-tile>
+              </mat-grid-list>  
+              
+
+            
+            
+        </div>
+    </div>
+
+</div>
+
