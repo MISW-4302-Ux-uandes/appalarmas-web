@@ -1,0 +1,127 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="bg-card">
+        <div class="flex flex-col w-full max-w-screen-xl mx-auto px-6 sm:px-8">
+            <div class="flex flex-col sm:flex-row flex-auto sm:items-center min-w-0 my-8 sm:my-12">
+                <!-- Avatar and name -->
+                <div class="flex flex-auto items-center min-w-0">
+                    <div class="flex flex-col min-w-0 ml-4">
+                        <div class="flex items-center">
+                            <!-- Title -->
+                            <div class="mt-2">
+                                <h2
+                                    class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
+                                    <ng-container>
+                                        <h1>Nueva alarma</h1>
+                                    </ng-container>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center mt-6 sm:mt-0 sm:ml-2 space-x-3">
+                    <button class="bg-accent" mat-flat-button [color]="'accent'" (click)="descartar()">
+                        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_outline:user-group'"></mat-icon>
+                        <span class="ml-2">Descartar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+        <div class="w-full max-w-screen-xl mx-auto">
+            <!-- Content -->
+            <form class="p-4 bg-card shadow rounded overflow-hidden" [formGroup]="horizontalStepperForm">
+                <mat-horizontal-stepper [linear]="true" #horizontalStepper>
+
+                    <mat-step [formGroupName]="'step1'" [stepControl]="horizontalStepperForm.get('step1')">
+                        <ng-template matStepLabel>Para quién</ng-template>
+                        <div class="grid grid-cols-2 ">
+
+
+                            <span class="font-medium ">Seleccione para quién es la alarma</span>
+                            <div class="flex flex-col gt-sm:flex-row">
+                                <div class="flex flex-col mt-8 gt-sm:mt-0 gt-sm:ml-16">
+                                    <mat-radio-group class="flex flex-col" [color]="'primary'"
+                                        [formControlName]="'para'">
+                                        <mat-radio-button class="mb-2" [value]="'yoMismo'">
+                                            Yo mismo
+                                        </mat-radio-button>
+                                        <mat-radio-button [value]="'contacto-grupo'">
+                                            Contacto o Grupo
+                                        </mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end mt-8">
+                            <button class="px-8" mat-flat-button [color]="'primary'" type="button" matStepperNext>
+                                Siguiente
+                            </button>
+                        </div>
+                    </mat-step>
+
+                    <mat-step [formGroupName]="'step2'" [stepControl]="horizontalStepperForm.get('step2')">
+                        <ng-template matStepLabel>Tipo de alarma</ng-template>
+                        <!--Tarjetas-->
+                        <div class="flex items-center justify-between grid grid-cols-2 ">
+
+                            <app-alarm-card-type button *ngFor="let item of tiposDeAlarmas" [titulo]="item.titulo"
+                                [descripcion]="item.descripcion"></app-alarm-card-type>
+                        </div>
+
+
+                        <div class="flex justify-end mt-8">
+                            <button class="px-8 mr-2" mat-flat-button [color]="'accent'" type="button"
+                                matStepperPrevious>
+                                Regresar
+                            </button>
+                            <button class="px-8" mat-flat-button [color]="'primary'" type="button" matStepperNext>
+                                Siguiente
+                            </button>
+                        </div>
+                    </mat-step>
+
+                    <mat-step [formGroupName]="'step3'" [stepControl]="horizontalStepperForm.get('step3')">
+                        <ng-template matStepLabel>Datos</ng-template>
+
+                        <!--Formulario-->
+                        <div class="flex justify-end mt-8">
+                            <button class="px-8 mr-2" mat-flat-button [color]="'accent'" type="button"
+                                matStepperPrevious>
+                                Regresar
+                            </button>
+                            <button class="px-8" mat-flat-button [color]="'primary'" type="button" matStepperNext>
+                                Siguiente
+                            </button>
+                        </div>
+                    </mat-step>
+
+                    <mat-step>
+                        <ng-template matStepLabel>Confirmar</ng-template>
+                        <p class="my-6 font-medium">
+                            Thank you for completing our form! You can reset the form if you would like to change your
+                            information.
+                        </p>
+                        <div class="flex justify-end mt-8">
+                            <button class="px-8 mr-2" mat-flat-button [color]="'accent'" type="button"
+                                matStepperPrevious>
+                                Regresar
+                            </button>
+                            <button class="px-8" mat-flat-button [color]="'primary'" type="reset"
+                                (click)="horizontalStepper.reset();">
+                                Guardar
+                            </button>
+                        </div>
+                    </mat-step>
+
+                </mat-horizontal-stepper>
+            </form>
+        </div>
+    </div>
+
+</div>

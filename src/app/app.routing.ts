@@ -3,6 +3,7 @@ import { AuthGuard } from 'app/core/auth/guards/auth.guard';
 import { NoAuthGuard } from 'app/core/auth/guards/noAuth.guard';
 import { LayoutComponent } from 'app/layout/layout.component';
 import { InitialDataResolver } from 'app/app.resolvers';
+import { AlarmFormComponent } from './modules/components/alarm-form/alarm-form.component';
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -62,6 +63,11 @@ export const appRoutes: Route[] = [
             {path: 'Grupos', loadChildren: ()=> import('app/modules/grupos/grupos.module').then(m => m.GruposModule)},
             {path: 'Ajustes', loadChildren: ()=> import('app/modules/ajustes/ajustes.module').then(m => m.AjustesModule)},
             {path: 'Categorias', loadChildren: ()=> import('app/modules/categorias/categorias.module').then(m => m.CategoriasModule)},
+            {path: 'Alarmas/nueva-alarma',component:AlarmFormComponent}
         ]
+    },
+    {
+        path: '**',
+        redirectTo: 'Alarmas'
     }
 ];

@@ -8,7 +8,7 @@ import { ComponentsModule } from '../components/components.module';
 const alarmasRoutes:Route[] = [
     {
         path:'',
-        component: AlarmasComponent
+        component: AlarmasComponent,
     }
 ]
 

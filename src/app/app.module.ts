@@ -11,8 +11,6 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-import { GruposComponent } from './modules/grupos/grupos.component';
-import { AlarmCardComponent } from './modules/components/alarm-card/alarm-card.component';
 
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
@@ -21,8 +19,7 @@ const routerConfig: ExtraOptions = {
 
 @NgModule({
     declarations: [
-        AppComponent,
-        GruposComponent,
+        AppComponent
     ],
     imports     : [
         BrowserModule,
