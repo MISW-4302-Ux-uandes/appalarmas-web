@@ -46,15 +46,15 @@
                 <mat-grid-tile [colspan]="1">Color etiqueta</mat-grid-tile>
                 <mat-grid-tile>Label</mat-grid-tile>
                 <mat-grid-tile>Cantidad de alarmas</mat-grid-tile>
-                <mat-grid-tile >Acción</mat-grid-tile>
+                <mat-grid-tile >Acciones</mat-grid-tile>
             </mat-grid-list>
             <mat-grid-list *ngFor="let item of categorias" cols="5" rowHeight="5:1">
-                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-{{item.color}}-500 dark:text-red-400"></mat-icon></mat-grid-tile>
+                <mat-grid-tile [colspan]="1" ><mat-icon svgIcon="heroicons_solid:tag" class="flex justify-center  ml-1 text-{{item.color}}-500 dark:text-{{item.color}}-400"></mat-icon></mat-grid-tile>
                 <mat-grid-tile>{{item.titulo}}</mat-grid-tile>
-                <mat-grid-tile>{{item.alarmas}}</mat-grid-tile>
+                <mat-grid-tile>{{item.alarmas}}{{item.color}}</mat-grid-tile>
                 <mat-grid-tile>
-                    <button mat-button color="accent" (click)="abrirFormEditarCategoria(item.titulo)"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
-                    <button mat-button color="accent" (click)="deleteCat(item.titulo)"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                    <button mat-button color="primary" (click)="abrirFormEditarCategoria(item.titulo)"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="warn" (click)="deleteCat(item.titulo)"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
                 </mat-grid-tile>
               </mat-grid-list>
 

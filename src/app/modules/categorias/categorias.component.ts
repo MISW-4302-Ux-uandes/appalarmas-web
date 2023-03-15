@@ -25,7 +25,7 @@ export class CategoriasComponent {
             alarmas:'3'
         },
         {
-            color:'orange',
+            color:'purple',
             titulo:"Toma medicamentos",
             alarmas:'1'
         },
