@@ -1,0 +1,48 @@
+<div class="mt-8 p-8">
+
+    <div class="mb-8">
+
+        <h1 class="text-center ">Recordarme en</h1>
+        <h1 class="text-center text-bold">{{tiempoTotal}} min</h1>
+    </div>
+    <div class="flex grid grid-cols-2 ">
+        <fuse-card
+            class="flex flex-col items-center justify-center min-h-30 bg-card max-w-70 w-full px-8 pt-6 pb-4 mb-4 mr-8 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(5)">
+            <div class="text-2xl font-semibold leading-tight">+5 min</div>
+        </fuse-card>
+        <fuse-card
+            class="flex flex-col items-center justify-center max-w-70 w-full px-8 pt-6 pb-4 mb-4 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(10)">
+            <div class="text-2xl font-semibold leading-tight">+10 min</div>
+        </fuse-card>
+    </div>
+
+    <div class="flex grid grid-cols-2 ">
+        <fuse-card
+            class="flex flex-col items-center justify-center min-h-30 bg-card max-w-70 w-full px-8 pt-6 pb-4 mb-4 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(15)">
+            <div class="text-2xl font-semibold leading-tight">+15 min</div>
+        </fuse-card>
+        <fuse-card
+            class="flex flex-col items-center justify-center max-w-70 w-full px-8 pt-6 pb-4 mb-4 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(30)">
+            <div class="text-2xl font-semibold leading-tight">+30 min</div>
+        </fuse-card>
+    </div>
+
+    <div class="flex grid grid-cols-2 ">
+        <fuse-card
+            class="flex flex-col items-center justify-center min-h-30 bg-card max-w-70 w-full px-8 pt-6 pb-4 mb-4 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(60)">
+            <div class="text-2xl font-semibold leading-tight">+1 hora</div>
+        </fuse-card>
+        <fuse-card
+            class="flex flex-col items-center justify-center max-w-70 w-full px-8 pt-6 pb-4 mb-4 cursor-pointer hover:bg-primary"
+            (click)="sumarTiempo(720)">
+            <div class="text-2xl font-semibold leading-tight">+12 horas</div>
+        </fuse-card>
+    </div>
+    <h1 class="text-center ">Pulsa una duración. Puedes pulsar varias veces para ajustar el tiempo necesario, este se
+        irá sumando</h1>
+</div>

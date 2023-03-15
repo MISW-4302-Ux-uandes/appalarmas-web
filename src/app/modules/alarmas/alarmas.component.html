@@ -77,14 +77,14 @@
                         </span>
                     </ng-template>
                     <ng-template matTabContent>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full min-w-0">
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
-                          <app-alarm-card></app-alarm-card>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full min-w-0">
+                          <app-alarm-card *ngFor="let a of alarmas"
+                          [titulo]="a.titulo"
+                          [categoria]="a.categoria"
+                          [fecha]="a.fecha"
+                          [activo]="a.activo"
+                          ></app-alarm-card>
+
                         </div>
                     </ng-template>
                 </mat-tab>
@@ -98,8 +98,14 @@
                         </span>
                     </ng-template>
                     <ng-template matTabContent>
-                        <div class="grid grid-cols-1 sm:grid-cols-6 gap-6 w-full min-w-0">
-                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full min-w-0">
+                            <app-alarm-card *ngFor="let a of alarmasInactivas"
+                            [titulo]="a.titulo"
+                            [categoria]="a.categoria"
+                            [fecha]="a.fecha"
+                            [activo]="a.activo"
+                            ></app-alarm-card>
+                          </div>
                     </ng-template>
                 </mat-tab>
 
@@ -113,7 +119,12 @@
                     </ng-template>
                     <ng-template matTabContent>
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full min-w-0">
-
+                            <app-alarm-card *ngFor="let a of alarmasHoy"
+                            [titulo]="a.titulo"
+                            [categoria]="a.categoria"
+                            [fecha]="a.fecha"
+                            [activo]="a.activo"
+                            ></app-alarm-card>
                         </div>
                     </ng-template>
                 </mat-tab>
@@ -128,7 +139,12 @@
                     </ng-template>
                     <ng-template matTabContent>
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full min-w-0">
-
+                            <app-alarm-card *ngFor="let a of alarmasProximas"
+                            [titulo]="a.titulo"
+                            [categoria]="a.categoria"
+                            [fecha]="a.fecha"
+                            [activo]="a.activo"
+                            ></app-alarm-card>
                         </div>
                     </ng-template>
                 </mat-tab>

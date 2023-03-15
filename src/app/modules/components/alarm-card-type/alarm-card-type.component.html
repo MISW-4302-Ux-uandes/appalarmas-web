@@ -1,5 +1,5 @@
 
-<fuse-card class="flex flex-col max-w-100 w-full px-8 pt-6 pb-4">
+<fuse-card class="flex flex-col max-w-100 w-full px-8 pt-6 pb-4 cursor-pointer hover:bg-hover {{selectedType?'bg-primary text-white':''}}" (click)="selected(titulo)">
     <div class="text-2xl font-semibold leading-tight">{{titulo}}</div>
     <div class="mt-4">
         {{descripcion}}

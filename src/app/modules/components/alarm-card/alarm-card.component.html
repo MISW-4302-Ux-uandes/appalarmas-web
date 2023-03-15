@@ -1,25 +1,26 @@
 <fuse-card class="flex flex-col max-w-80 w-full px-8 pt-6 pb-4 filter-list">
     <div class="flex items-center justify-between">
         <div class="flex flex-col">
-            <div class="text-2xl font-semibold leading-tight">Trabajo</div>
+            <div class="text-2xl font-semibold leading-tight">{{titulo}}</div>
         </div>
         <div class="-mr-3">
             <mat-slide-toggle
         class="example-margin"
         color="primary"
-        [checked]="true"
+        [(ngModel)]="activo"
+        (ngModelChange)="activar($event)"
         >
     </mat-slide-toggle>
         </div>
     </div>
     <div class="flex flex-col mt-1">
         <div class="flex">
-            <div class="text-md text-secondary">Cita médica</div>
+            <div class="text-md text-secondary">{{categoria}}</div>
         </div>
     </div>
     <div class="flex flex-col mt-5">
         <div class="flex">
-            <div class="text-md text-secondary">15:15 2023-05-03</div>
+            <div class="text-md text-secondary">{{fecha}}</div>
         </div>
     </div>
 </fuse-card>

@@ -11,6 +11,12 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
@@ -35,7 +41,13 @@ const routerConfig: ExtraOptions = {
         CoreModule,
 
         // Layout module of your application
-        LayoutModule
+        LayoutModule,
+        MatInputModule,
+        MatSelectModule,
+        MatNativeDateModule,
+        MatAutocompleteModule,
+        MatLuxonDateModule,
+        MatSnackBarModule
     ],
     bootstrap   : [
         AppComponent

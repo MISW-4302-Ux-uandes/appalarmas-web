@@ -4,6 +4,7 @@ import { FormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { FuseAlertService } from '@fuse/components/alert';
+import { AlertasService } from 'app/services/alertas.service';
 
 export interface PeriodicElement {
     name: string;
@@ -37,7 +38,7 @@ export class GroupFormComponent implements OnInit {
 
     constructor(private _formBuilder:FormBuilder,
                 public matDialogRef: MatDialogRef<GroupFormComponent>,
-                private _alertaService:FuseAlertService){}
+                private alertasService:AlertasService){}
     ngOnInit(): void
     {
         // Create the form
@@ -61,8 +62,9 @@ export class GroupFormComponent implements OnInit {
     }
 
     save(){
-        this._alertaService.show('')
+
         this.matDialogRef.close();
+        this.alertasService.showAlert('Grupo creado correctamente')
     }
 
 

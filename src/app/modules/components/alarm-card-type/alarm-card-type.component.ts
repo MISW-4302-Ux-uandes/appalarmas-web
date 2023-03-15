@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 export class AlarmCardTypeComponent {
     @Input() titulo:string='';
     @Input() descripcion:string='';
+    selectedType:boolean=false
+
+    selected(type:string){
+        console.log('type: ',type)
+        this.selectedType = true;
+    }
 }

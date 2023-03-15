@@ -1,0 +1,61 @@
+<form class="flex flex-col mt-8 p-8 shadow overflow-hidden">
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Título</mat-label>
+            <input matInput [placeholder]="'Input'">
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Fecha</mat-label>
+            <input matInput [placeholder]="'2023-02-03'">
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Hora</mat-label>
+            <input matInput [placeholder]="'14:00'">
+        </mat-form-field>
+    </div>
+
+
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Repite</mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">Una vez</mat-option>
+                <mat-option [value]="'2'">Diariamente</mat-option>
+                <mat-option [value]="'2'">Semanal</mat-option>
+                <mat-option [value]="'3'">Mensual</mat-option>
+                <mat-option [value]="'4'">Anual</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <div class="sm:col-span-4 flex ">
+            <mat-label class="mb-2">Sonido</mat-label>
+            <mat-slider>
+                <input matSliderThumb>
+            </mat-slider>
+        </div>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Tono</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let item of [1,2,3,4,5]" [value]="item">Tono {{item}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+
+    </div>
+
+    <div class="flex">
+        <mat-form-field
+
+            class="flex-auto">
+            <mat-label>Notas</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>
+

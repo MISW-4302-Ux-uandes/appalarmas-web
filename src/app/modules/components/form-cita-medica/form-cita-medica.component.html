@@ -1,0 +1,95 @@
+<form class="flex flex-col mt-8 p-8 shadow overflow-hidden">
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Título</mat-label>
+            <input matInput [placeholder]="'Input'">
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Fecha</mat-label>
+            <input matInput [placeholder]="'2023-02-03'">
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Hora</mat-label>
+            <input matInput [placeholder]="'14:00'">
+        </mat-form-field>
+    </div>
+
+
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Paciente</mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">David Castro</mat-option>
+                <mat-option [value]="'2'">Nelson Barreto</mat-option>
+                <mat-option [value]="'2'">Invitado Uniandes</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Centro Médico</mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">Calle 26</mat-option>
+                <mat-option [value]="'2'">Portal Norte</mat-option>
+                <mat-option [value]="'2'">Chapinero</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Consultorio</mat-label>
+            <input matInput [placeholder]="'102'">
+        </mat-form-field>
+    </div>
+
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4 ">
+            <mat-label>Médico</mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">David Castro</mat-option>
+                <mat-option [value]="'2'">Nelson Barreto</mat-option>
+                <mat-option [value]="'2'">Invitado Uniandes</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Especialidad</mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">Odontología</mat-option>
+                <mat-option [value]="'2'">Pediatría</mat-option>
+                <mat-option [value]="'2'">Urología</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="flex flex-col gt-sm:flex-row">
+        <div class="flex flex-col">
+            <mat-label>Preparación especial</mat-label>
+            <div class="flex flex-col">
+                <mat-checkbox class="mb-1" [color]="'primary'">
+                    Requiere Ayuno
+                </mat-checkbox>
+                <mat-checkbox class="mb-1" [color]="'primary'">
+                    Examenes
+                </mat-checkbox>
+                <mat-checkbox class="mb-1" [color]="'primary'">
+                    Radiografía
+                </mat-checkbox>
+                <mat-checkbox class="mb-4" [color]="'primary'">
+                    Muestras Biológicas
+                </mat-checkbox>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex">
+        <mat-form-field
+
+            class="flex-auto">
+            <mat-label>Notas</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>

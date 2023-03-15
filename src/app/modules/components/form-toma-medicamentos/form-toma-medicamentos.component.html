@@ -1,0 +1,75 @@
+<form class="flex flex-col mt-8 p-8 shadow overflow-hidden">
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Título</mat-label>
+            <input matInput [placeholder]="'Input'">
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Fecha Inicio</mat-label>
+            <input matInput [placeholder]="'2023-02-03'">
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Hora Inicio</mat-label>
+            <input matInput [placeholder]="'14:00'">
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Fecha Fin</mat-label>
+            <input matInput [placeholder]="'2023-02-03'">
+        </mat-form-field>
+
+        <mat-form-field class="flex-auto">
+            <mat-label>Hora Fin</mat-label>
+            <input matInput [placeholder]="'14:00'">
+        </mat-form-field>
+    </div>
+
+
+    <div class="flex">
+        <mat-form-field class="flex-auto">
+            <mat-label>Medicamento</mat-label>
+            <input matInput [placeholder]="'Acetaminofen'">
+        </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label>Dosificación</mat-label>
+            <input matInput [placeholder]="'50'">
+        </mat-form-field>
+        <mat-form-field class="flex-auto mr-4">
+            <mat-label></mat-label>
+            <mat-select>
+                <mat-option [value]="'1'">ml</mat-option>
+                <mat-option [value]="'2'">g</mat-option>
+                <mat-option [value]="'2'">ug/mcg</mat-option>
+                <mat-option [value]="'3'">ugotas</mat-option>
+                <mat-option [value]="'4'">oz</mat-option>
+                <mat-option [value]="'5'">cda</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="flex-auto">
+            <mat-label>¿Formulado?</mat-label>
+            <mat-slide-toggle
+            class="example-margin"
+            color="primary"
+            [checked]="false"
+            >
+        </mat-slide-toggle>
+    </div>
+    </div>
+
+    <div class="flex">
+        <mat-form-field
+
+            class="flex-auto">
+            <mat-label>Notas</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>
+
