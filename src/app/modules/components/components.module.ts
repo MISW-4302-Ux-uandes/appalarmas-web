@@ -22,11 +22,23 @@ import { FormTomaMedicamentosComponent } from './form-toma-medicamentos/form-tom
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
+import { CategoriaEditFormComponent } from './categoria-edit-form/categoria-edit-form.component';
+import { CategoriaFormComponent } from './categoria-form/categoria-form.component';
 
 @NgModule({
-  declarations: [AlarmCardComponent, AlarmFormComponent, AlarmCardTypeComponent, GroupFormComponent, FormAlarmaSencillaComponent, FormCitaMedicaComponent, FormRecordatorioRapidoComponent, FormTomaMedicamentosComponent],
+  declarations: [
+    AlarmCardComponent,
+    AlarmFormComponent,
+    AlarmCardTypeComponent,
+    GroupFormComponent,
+    FormAlarmaSencillaComponent,
+    FormCitaMedicaComponent,
+    FormRecordatorioRapidoComponent,
+    FormTomaMedicamentosComponent,
+    CategoriaFormComponent,
+    CategoriaEditFormComponent
+],
   imports: [
     CommonModule,
     SharedModule,
