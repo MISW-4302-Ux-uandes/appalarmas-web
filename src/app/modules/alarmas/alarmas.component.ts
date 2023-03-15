@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { CategoriaFormComponent } from '../components/categoria-form/categoria-form.component';
 import { GroupFormComponent } from '../components/group-form/group-form.component';
 
 interface Alarma{
@@ -145,5 +146,15 @@ export class AlarmasComponent {
                 console.log('Compose dialog was closed!');
             });
         }
+
+    abrirFormCrearCategoria(){
+        const dialogRef = this._matDialog.open(CategoriaFormComponent);
+
+        dialogRef.afterClosed()
+            .subscribe((result) => {
+                console.log('Compose dialog was closed!');
+            });
+        }
+
 
 }

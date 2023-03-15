@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { GroupFormComponent } from '../group-form/group-form.component';
-import { FuseAlertService } from '../../../../@fuse/components/alert/alert.service';
+
 import { MatDialogRef } from '@angular/material/dialog';
+import { AlertasService } from 'app/services/alertas.service';
 
 
 
@@ -13,11 +14,10 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class CategoriaFormComponent {
 
-  horizontalStepperForm: UntypedFormGroup;
 
   constructor(private _formBuilder:FormBuilder,
-    public MatDialogRef: MatDialogRef<GroupFormComponent>,
-    private _alertaService:FuseAlertService){}
+            public MatDialogRef: MatDialogRef<GroupFormComponent>,
+            private alertasService:AlertasService){}
 
 
   close(): void
@@ -27,10 +27,11 @@ export class CategoriaFormComponent {
   }
 
   save(){
-      this._alertaService.show('aaaaaa')
+
       this.MatDialogRef.close();
+      this.alertasService.showAlert('Categoría creada correctamente')
   }
 
-  
+
 
 }
