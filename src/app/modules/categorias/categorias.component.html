@@ -27,7 +27,7 @@
                     <button
                         mat-flat-button
                         [color]="'primary'"
-                        (click)="abrirFormCrearGrupo()"
+                        (click)="abrirFormCrearCategoria()"
                         >
                         <mat-icon
                             class="icon-size-5"
@@ -53,8 +53,8 @@
                 <mat-grid-tile>Citas Médicas</mat-grid-tile>
                 <mat-grid-tile>3 Alarmas</mat-grid-tile>
                 <mat-grid-tile>
-                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
-                    <button mat-button color="accent"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
+                    <button mat-button color="accent" (click)="abrirFormEditarCategoria('Citas Médicas')"><mat-icon svgIcon="heroicons_outline:pencil-alt"></mat-icon></button>
+                    <button mat-button color="accent" (click)="deleteCat('Citas Médicas')"><mat-icon svgIcon="heroicons_outline:trash"></mat-icon></button>
                 </mat-grid-tile>
               </mat-grid-list>
 

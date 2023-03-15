@@ -4,27 +4,28 @@
 
         </div>
 
-
         <!-- Divider -->
         <div class="my-10 border-t"></div>
 
         <!-- Section -->
-        <div class="w-full">
-            <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:music-note"></mat-icon> <div class="text-xl">Tono de alarma</div> </div>
+        
+        <div class="sm:col-span-4 flex items-center justify-between separador">
+            <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:music-note"></mat-icon> <div class="">Tono de alarma</div> </div>
             <div class="flex justify-end"><mat-icon svgIcon="heroicons_outline:chevron-right"></mat-icon></div>
         </div>
 
-        <div class="w-full">
-            <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:clock"></mat-icon> <div class="text-xl">Duración del tono de la llamada</div> </div>
+        <div class="sm:col-span-4 flex items-center justify-between separador">
+            <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:clock"></mat-icon> <div class="">Duración del tono de la llamada</div> </div>
             <div class="flex justify-end"><mat-icon svgIcon="heroicons_outline:chevron-right"></mat-icon></div>
         </div>
 
-        <div class="grid sm:grid-cols-4 gap-6 w-full mt-8">
+        <div class="grid sm:grid-cols-4 gap-1 w-full mt-1">
             <div class="sm:col-span-4 flex items-center justify-between">
+                <mat-icon svgIcon="heroicons_outline:volume-up"></mat-icon>
                 <div
                     class="flex-auto cursor-pointer"
                     (click)="twoStepToggle.toggle()">
-                    <div class="text-xl">Volumen</div>
+                    <div class="">Volumen</div>
                 </div>
                 <mat-slider>
                     <input matSliderThumb>
@@ -34,8 +35,8 @@
             </div>
 
             <!-- 2-step auth -->
-            <div class="sm:col-span-4 flex items-center justify-between">
-                <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:volume-off"></mat-icon> <div class="text-xl">Vibra</div> </div>
+            <div class="sm:col-span-4 flex items-center justify-between separador2">
+                <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:volume-off"></mat-icon> <div class="">Vibra</div> </div>
                 <div
                     class="flex-auto cursor-pointer"
                     (click)="twoStepToggle.toggle()">
@@ -51,8 +52,8 @@
 
             </div>
             <!-- Ask to change password -->
-            <div class="sm:col-span-4 flex items-center justify-between">
-                <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:reply"></mat-icon> <div class="text-xl">Repetición</div> </div>
+            <div class="sm:col-span-4 flex items-center justify-between separador" >
+                <div class="flex justify-start "><mat-icon svgIcon="heroicons_outline:reply"></mat-icon> <div class="">Repetición</div> </div>
                 <div
                     class="flex-auto cursor-pointer"
                     (click)="askPasswordChangeToggle.toggle()">
